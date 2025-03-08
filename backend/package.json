@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "build": "esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist"
   },
   "author": "",
   "license": "ISC",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "dotenv-cli": "^8.0.0",
+    "esbuild": "^0.25.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.9",
     "supertest": "^7.0.0"
