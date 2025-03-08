@@ -1,0 +1,20 @@
+<div class="post-conf">
+  <div class="confession-container">
+    <h2 class="confession-title">Confessions of a Hidden Soul</h2>
+    <textarea [(ngModel)]="textBox" placeholder="Write your confessions here..."></textarea>
+    <button (click)="onSave()">Post Confession</button>
+  </div>
+
+  <div class="box-container">
+    <div class="box" *ngFor="let confession of confessions; let i = index">
+      <div class="user-info">
+        <!-- ✅ Show sequential IDs instead of MongoDB _id -->
+        <p>#{{ i + 1 }}</p>  
+        <span class="timestamp">
+          {{ confession.createdAt ? (confession.createdAt | date: 'MMM d, y h:mm a') : 'Unknown' }}
+        </span>
+      </div>
+      <p class="confession-text">{{ confession.message }}</p>
+    </div>
+  </div>
+</div>

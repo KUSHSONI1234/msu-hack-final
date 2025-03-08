@@ -1,0 +1,105 @@
+.navbar-section {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    box-shadow: 0 0 30px rgba(20, 82, 93, 0.445);
+}
+
+.nav-left .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* width: 40%; */
+    /* background-color: #53BAD3; */
+}
+
+.nav-left .logo img {
+    width: 100px;
+    height: auto;
+}
+.nav-center
+{
+    width: 45%;
+    /* background-color: #53BAD3; */
+}
+
+.nav-center nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-center nav ul li a {
+    font-size: 22px;
+    color: #8A8893;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-center nav ul li a:hover {
+    color: #53BAD3;
+}
+
+.nav-center nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 3px;
+    background-color: #53BAD3;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-center nav ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-center nav ul li a.active {
+    color: #53BAD3 !important;
+}
+
+.user-menu {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown a:hover {
+    background: #f0f0f0;
+}
