@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
-// import { Confession } from "../models/Confession.js"; 
 import { Confession } from "../models/Confession.js"; 
-
 
 // ✅ Create a Confession
 export const postConfession = async (req, res) => {

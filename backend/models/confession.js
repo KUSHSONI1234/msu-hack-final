@@ -11,4 +11,4 @@ const confessionSchema = new mongoose.Schema(
   { timestamps: true } // Adds createdAt & updatedAt fields automatically
 );
 
-export const Confession = mongoose.model("Confession", confessionSchema);
+export const Confession = mongoose.model("confession", confessionSchema);
